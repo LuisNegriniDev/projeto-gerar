@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1117">
+  <meta name="description" content="Apresentação interativa e quiz sobre processos de distribuição e armazenamento.">
+  <title>Distribuição &amp; Armazenamento — Aprenda e jogue</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app" aria-label="Apresentação sobre distribuição e armazenamento">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Projeto de aula da Gerar — voltar ao início" onclick="restart(); return false;">
+        <img class="gerar-logo" src="gerar-logo.svg" alt="Gerar">
+        <span class="brand-caption">Projeto de aula</span>
+      </a>
+      <div class="stage" id="stageLabel">APRESENTAÇÃO INTERATIVA</div>
+    </header>
+    <nav class="phase-nav" aria-label="Etapas da experiência">
+      <ol>
+        <li data-phase-step="content"><span class="phase-index">01</span><span class="phase-copy"><b>Conteúdo</b><small>7 etapas</small></span></li>
+        <li data-phase-step="eureka"><span class="phase-index">02</span><span class="phase-copy"><b>Eureka</b><small>Simulação prática</small></span></li>
+        <li data-phase-step="level"><span class="phase-index">03</span><span class="phase-copy"><b>Level Up</b><small>Avaliação</small></span></li>
+        <li data-phase-step="next"><span class="phase-index">04</span><span class="phase-copy"><b>Next Level</b><small>Encerramento</small></span></li>
+      </ol>
+    </nav>
+    <div class="progress-wrap" id="progressWrap" hidden>
+      <div class="progress-meta"><span id="progressLabel">Conteúdo</span><span id="progressCount">1 / 7</span></div>
+      <div class="progress-track" role="progressbar" id="progressBar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+    <section class="card" aria-live="polite" aria-atomic="true">
+      <div id="screen" class="card-content"></div>
+    </section>
+    <p class="footer-note">Aprenda o fluxo. Domine cada etapa.</p>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
